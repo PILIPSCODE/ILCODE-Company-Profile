@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  </head>
+
+  <body>
+    <div
+      class="loader-website fixed z-50 pointer-events-none h-screen w-screen"
+    ></div>
+    <div class="wrapper-animation hidden">
+      <nav
+        class="fixed nav w-full z-40 h-14 p-10 px-20 max-md:px-10 max-sm:px-5 flex justify-end items-center"
+      ></nav>
+      <section id="hero" class="h-screen w-screen bg-[#E8C162]/30">
+        <div
+          class="absolute pointer-events-none inset-0 -z-0 h-full w-full bg-[linear-gradient(to_right,#80808018_2px,transparent_0px),linear-gradient(to_bottom,#80808018_4px,transparent_4px)] bg-[size:60px_60px]"
+        ></div>
+        <div
+          class="md:w-7/12 w-11/12 h-full mx-auto flex justify-center items-center flex-col"
+        >
+          <h1
+            class="xl:text-7xl md:text-5xl max-md:text-4xl font-bold text-center mb-2 text-tersier"
+          >
+            We Turn Ideas Into Digital Masterpieces.
+          </h1>
+          <h3
+            class="xl:text-5xl md:text-4xl max-md:text-2xl text-center text-tersier"
+          >
+            Technology make your brand shine.
+          </h3>
+          <button
+            class="bg-tersier px-5 py-2 mt-8 text-white text-2xl rounded-md"
+          >
+            Get Free a Consultant
+          </button>
+        </div>
+      </section>
+      <section class="h-screen bg-tersier"></section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+    <script src="./component.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

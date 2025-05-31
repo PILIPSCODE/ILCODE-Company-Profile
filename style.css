@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Tagalog&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 * {
@@ -7,8 +7,8 @@
 
 
 :root {
-    --tersier: #342C29;
-    --primary: #E8C162;
+    --tersier: #402E32;
+    --primary: #F8ECCF;
 }
 
 .bg-tersier {
@@ -41,8 +41,7 @@ body,
 }
 
 body {
-    font-family: "Noto Sans Tagalog", sans-serif;
-
+    font-family: "Noto Sans", sans-serif;
 }
 
 .custom-background {

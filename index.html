@@ -16,7 +16,18 @@
       <nav
         class="fixed nav w-full z-40 h-14 p-10 px-20 max-md:px-10 max-sm:px-5 flex justify-end items-center"
       ></nav>
-      <section id="hero" class="h-screen w-screen bg-[#E8C162]/30">
+      <section id="hero" class="h-screen w-screen bg-primary">
+        <span
+          class="flex gap-3 items-center absolute bg-tersier mt-2 mx-10 text-white rounded-xl px-2"
+        >
+          <img
+            src="/source/log.png"
+            class="w-18 max-md:w-14 rounded-md p-2"
+            alt=""
+            srcset=""
+          />
+          <h1 class="text-4xl max-md:text-2xl font-bold">ILCODE</h1>
+        </span>
         <div
           class="absolute pointer-events-none inset-0 -z-0 h-full w-full bg-[linear-gradient(to_right,#80808018_2px,transparent_0px),linear-gradient(to_bottom,#80808018_4px,transparent_4px)] bg-[size:60px_60px]"
         ></div>
@@ -24,12 +35,12 @@
           class="md:w-7/12 w-11/12 h-full mx-auto flex justify-center items-center flex-col"
         >
           <h1
-            class="xl:text-7xl md:text-5xl max-md:text-4xl font-bold text-center mb-2 text-tersier"
+            class="xl:text-7xl md:text-5xl w-full max-md:text-4xl font-black text-center mb-2 text-tersier"
           >
-            We Turn Ideas Into Digital Masterpieces.
+            Turn Ideas Into Digital Masterpieces.
           </h1>
           <h3
-            class="xl:text-5xl md:text-4xl max-md:text-2xl text-center text-tersier"
+            class="xl:text-4xl md:text-3xl max-md:text-2xl text-center text-tersier"
           >
             Technology make your brand shine.
           </h3>
@@ -40,7 +51,71 @@
           </button>
         </div>
       </section>
-      <section class="h-screen bg-tersier"></section>
+
+      <section
+        id="services"
+        class="w-full p-20 relative bg-primary py-60 overflow-hidden"
+      >
+        <div>
+          <h1 class="font-black text-6xl text-tersier">Services</h1>
+          <h3 class="text-2xl w-9/12 text-justify mt-7">
+            We offer custom website development, mobile apps, and AI solutions
+            tailored to your business goals. Our team focuses on quality,
+            performance, and user experience to deliver results that truly make
+            an impact.
+          </h3>
+        </div>
+        <div class="wrapper mt-28 flex flex-col gap-6 items-center relative">
+          <div
+            class="card w-full rounded-3xl border-2 border-white top-0 relative bg-tersier h-[26rem]"
+          ></div>
+          <div
+            class="card w-full rounded-3xl border-2 border-white top-20 absolute bg-tersier h-[26rem]"
+          ></div>
+          <div
+            class="card w-full rounded-3xl border-2 border-white top-40 absolute bg-tersier h-[26rem]"
+          ></div>
+        </div>
+      </section>
+
+      <section id="why-choose-us" class="pt-20 bg-primary relative">
+        <div
+          class="absolute left-1/2 pointer-events-none inset-0 -z-0 h-full w-1/2 bg-[linear-gradient(to_top,#80808018_1px,transparent_0px),linear-gradient(to_left,#80808018_3px,transparent_0px)] bg-[size:60px_60px]"
+        ></div>
+        <div class="relative z-0">
+          <h1 class="font-black text-6xl text-tersier text-center">
+            WHY CHOOSE US?
+          </h1>
+          <div class="flex justify-center">
+            <div
+              class="grid grid-cols-3 gap-40 mt-20 mx- font-extrabold place-content-center"
+            >
+              <div
+                class="w-80 h-[26rem] rounded-4xl bg-[#FFF8EC] text-center flex flex-col justify-around"
+              >
+                <h3 class="text-3xl">We Don’t Just Build We Transform</h3>
+                <i class="bi bi-graph-up-arrow text-9xl"></i>
+              </div>
+              <div
+                class="w-80 h-[26rem] rounded-4xl bg-[#FFF8EC] text-center flex flex-col justify-around"
+              >
+                <h3 class="text-3xl">Fast, But Never Rushed</h3>
+                <i class="bi bi-lightning-charge-fill text-9xl"></i>
+              </div>
+              <div
+                class="w-80 h-[26rem] rounded-4xl bg-[#FFF8EC] text-center flex flex-col justify-around"
+              >
+                <h3 class="text-3xl">Your Partner, Not Just a Vendor</h3>
+                <i class="bi bi-people-fill text-9xl"></i>
+              </div>
+            </div>
+          </div>
+          <p class="text-tersier text-center text-3xl py-20 font-semibold">
+            "We don't just build software. We create solutions that take <br />
+            your business to the next level."
+          </p>
+        </div>
+      </section>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>

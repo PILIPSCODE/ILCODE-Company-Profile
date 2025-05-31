@@ -17,7 +17,7 @@ function initScroll() {
   // 1. Set initial positions (below the first card)
   card.forEach((el, i) => {
     if (i !== 0) {
-      gsap.set(el, { yPercent: 150 });
+      gsap.set(el, { yPercent: 130 });
     }
   });
 
@@ -32,20 +32,12 @@ function initScroll() {
     },
     defaults: { ease: "none" },
   });
-
-  card.forEach((_, i) => {
-    if (i < card.length - 1) {
-      timeline.to(card[i], { y: -30 });
-    }
-  });
   card.forEach((_, i) => {
     if (i < card.length - 1) {
       timeline.to(card[i + 1], { yPercent: 0 });
     }
   });
 }
-
-ScrollTrigger.refresh();
 
 function raf(time) {
   lenis.raf(time);

@@ -9,9 +9,9 @@
   </head>
 
   <body>
-    <div
+    <!-- <div
       class="loader-website fixed z-50 pointer-events-none h-screen w-screen"
-    ></div>
+    ></div> -->
     <div class="wrapper-animation hidden">
       <nav
         class="fixed nav w-full z-40 h-14 p-10 px-20 max-md:px-10 max-sm:px-5 flex justify-end items-center"
@@ -67,22 +67,81 @@
             an impact.
           </h3>
         </div>
-        <div class="wrapper h-screen flex flex-col gap-6 items-center relative">
+        <div
+          class="wrapper md:h-screen flex flex-col gap-6 items-center relative"
+        >
           <div
-            class="card w-full rounded-3xl border-2 border-white top-0 relative max-md:mb-96 bg-tersier h-[26rem]"
-          ></div>
+            class="card w-full rounded-3xl p-8 border-2 max-md:flex-col flex justify-between text-primary border-white top-0 relative max-md:mb-96 bg-tersier max-md:h-full h-[26rem]"
+          >
+            <div class="max-md:w-full w-1/2">
+              <h1 class="font-bold max-xl:text-3xl text-5xl">
+                Web Development
+              </h1>
+              <p class="mt-10 max-xl:w-full xl:w-2/3 text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sapiente ipsa tenetur reprehenderit, mollitia facere soluta ea
+                eius adipisci. Excepturi aliquid sit tenetur ex itaque adipisci
+                iste. Aperiam ullam praesentium pariatur porro sed incidunt, vel
+                at aspernatur velit quidem nulla eos voluptatum cumque ipsa
+                veniam reprehenderit repellendus a provident qui nisi.
+              </p>
+            </div>
+            <div
+              class="h-full w-full md:w-72 bg-primary max-md:mt-7 text-black text-9xl justify-center items-center flex"
+            >
+              <i class="bi bi-laptop"></i>
+            </div>
+          </div>
           <div
-            class="card w-full rounded-3xl border-2 border-white top-20 absolute bg-tersier h-[26rem]"
-          ></div>
+            class="card w-full rounded-3xl p-8 border-2 max-md:flex-col flex justify-between text-primary border-white top-24 absolute max-md:mb-96 bg-tersier md:h-[26rem]"
+          >
+            <div class="max-md:w-full w-1/2">
+              <h1 class="font-bold max-xl:text-3xl text-5xl">
+                Mobile Development
+              </h1>
+              <p class="mt-10 max-xl:w-full xl:w-2/3 text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sapiente ipsa tenetur reprehenderit, mollitia facere soluta ea
+                eius adipisci. Excepturi aliquid sit tenetur ex itaque adipisci
+                iste. Aperiam ullam praesentium pariatur porro sed incidunt, vel
+                at aspernatur velit quidem nulla eos voluptatum cumque ipsa
+                veniam reprehenderit repellendus a provident qui nisi.
+              </p>
+            </div>
+            <div
+              class="h-full w-full md:w-72 bg-primary max-md:mt-7 text-black text-9xl justify-center items-center flex"
+            >
+              <i class="bi bi-phone"></i>
+            </div>
+          </div>
           <div
-            class="card w-full rounded-3xl border-2 border-white top-40 absolute bg-tersier h-[26rem]"
-          ></div>
+            class="card w-full rounded-3xl p-8 border-2 max-md:flex-col flex justify-between text-primary border-white top-48 absolute max-md:mb-96 bg-tersier md:h-[26rem]"
+          >
+            <div class="max-md:w-full w-1/2">
+              <h1 class="font-bold max-xl:text-3xl text-5xl">
+                Artificial Intelegent
+              </h1>
+              <p class="mt-10 max-xl:w-full xl:w-2/3 text-justify">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Sapiente ipsa tenetur reprehenderit, mollitia facere soluta ea
+                eius adipisci. Excepturi aliquid sit tenetur ex itaque adipisci
+                iste. Aperiam ullam praesentium pariatur porro sed incidunt, vel
+                at aspernatur velit quidem nulla eos voluptatum cumque ipsa
+                veniam reprehenderit repellendus a provident qui nisi.
+              </p>
+            </div>
+            <div
+              class="h-full w-full md:w-72 bg-primary max-md:mt-7 text-black text-9xl justify-center items-center flex"
+            >
+              <i class="bi bi-robot"></i>
+            </div>
+          </div>
         </div>
       </section>
 
       <section id="why-choose-us" class="pt-20 bg-primary relative">
         <div
-          class="absolute left-1/2 pointer-events-none inset-0 -z-0 h-full w-1/2 bg-[linear-gradient(to_top,#80808018_1px,transparent_0px),linear-gradient(to_left,#80808018_3px,transparent_0px)] bg-[size:60px_60px]"
+          class="absolute left-1/2 pointer-events-none inset-0 -z-0 h-full w-1/2 bg-[linear-gradient(to_top,#80808018_1px,transparent_0px),linear-gradient(to_left,#80808018_2px,transparent_0px)] bg-[size:90px_90px]"
         ></div>
         <div class="relative z-0">
           <h1
@@ -92,29 +151,35 @@
           </h1>
           <div class="flex justify-center">
             <div
-              class="grid lg:grid-cols-3 sm:grid-cols-2 lg:gap-40 gap-10 mt-20 mx- font-extrabold place-content-center"
+              class="grid lg:grid-cols-3 sm:grid-cols-2 xl:gap-40 gap-10 mt-20 max-lg:p-10 font-extrabold place-items-center"
             >
               <div
-                class="w-80 h-[26rem] rounded-4xl bg-[#FFF8EC] text-center flex flex-col justify-around"
+                class="lg:w-80 w-full h-[28rem] p-2 rounded-4xl bg-[#FFF8EC] text-center flex flex-col justify-around"
               >
-                <h3 class="text-3xl">We Don’t Just Build We Transform</h3>
+                <h3 class="text-3xl max-md:text-xl">
+                  We Don’t Just Build We Transform
+                </h3>
                 <i class="bi bi-graph-up-arrow text-9xl"></i>
               </div>
               <div
-                class="w-80 h-[26rem] rounded-4xl bg-[#FFF8EC] text-center flex flex-col justify-around"
+                class="lg:w-80 w-full h-[28rem] p-2 rounded-4xl bg-[#FFF8EC] text-center flex flex-col justify-around"
               >
-                <h3 class="text-3xl">Fast, But Never Rushed</h3>
+                <h3 class="text-3xl max-md:text-xl">Fast, But Never Rushed</h3>
                 <i class="bi bi-lightning-charge-fill text-9xl"></i>
               </div>
               <div
-                class="w-80 h-[26rem] rounded-4xl bg-[#FFF8EC] text-center flex flex-col justify-around"
+                class="lg:w-80 w-full h-[28rem] p-2 rounded-4xl bg-[#FFF8EC] text-center flex flex-col justify-around"
               >
-                <h3 class="text-3xl">Your Partner, Not Just a Vendor</h3>
+                <h3 class="text-3xl max-md:text-xl">
+                  Your Partner, Not Just a Vendor
+                </h3>
                 <i class="bi bi-people-fill text-9xl"></i>
               </div>
             </div>
           </div>
-          <p class="text-tersier text-center text-3xl py-20 font-semibold">
+          <p
+            class="text-tersier text-center text-3xl max-md:text-xl py-20 font-semibold"
+          >
             "We don't just build software. We create solutions that take <br />
             your business to the next level."
           </p>

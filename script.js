@@ -20,7 +20,7 @@ function initScroll() {
 
   card.forEach((el, i) => {
     if (i !== 0) {
-      gsap.set(el, { yPercent: 130 });
+      gsap.set(el, { yPercent: 150 });
     }
   });
 
@@ -28,7 +28,7 @@ function initScroll() {
     scrollTrigger: {
       trigger: wrapper,
       pin: true,
-      start: "top 150px",
+      start: "top 100px",
       end: () => `+=${card.length * 100}%`,
       scrub: 1,
     },

@@ -3,6 +3,7 @@ const tlNavbar = gsap.timeline({ paused: true, reversed: true });
 
 addLoader();
 addNavBar();
+addFooter();
 
 async function Loader() {
   try {
@@ -16,6 +17,15 @@ async function Loader() {
 async function Navbar() {
   try {
     const component = await fetch("/component/navbar.html");
+    const data = await component.text();
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
+}
+async function Footer() {
+  try {
+    const component = await fetch("/component/footer.html");
     const data = await component.text();
     return data;
   } catch (error) {
@@ -80,11 +90,14 @@ async function addNavBar() {
   });
 
   const hamburger = document.querySelector(".menu-btn");
+  const navpin = document.querySelector("#nav");
   hamburger.addEventListener("click", () => {
     if (hamburger.classList.contains("active")) {
       tlNavbar.play(0);
+      navpin.style.pointerEvents = "auto";
     } else {
       tlNavbar.time(tlNavbar.duration()).reverse();
+      navpin.style.pointerEvents = "none";
       console.log(tlNavbar.time(), tlNavbar.progress(), tlNavbar.isActive());
     }
   });
@@ -194,4 +207,12 @@ async function addLoader() {
       },
       "-=2"
     );
+}
+
+async function addFooter() {
+  const data = await Footer();
+  const footer = document.querySelectorAll("#footer");
+  footer.forEach((e) => {
+    e.innerHTML = data;
+  });
 }

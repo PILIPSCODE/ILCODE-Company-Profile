@@ -5,6 +5,16 @@
     box-sizing: border-box;
 }
 
+@layer base {
+    .font-outline-2 {
+        -webkit-text-stroke: 1px var(--primary);
+    }
+
+    .font-outline-4 {
+        -webkit-text-stroke: 4px var(--primary);
+    }
+}
+
 
 :root {
     --tersier: #402E32;

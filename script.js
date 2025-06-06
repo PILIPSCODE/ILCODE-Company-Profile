@@ -20,7 +20,7 @@ function initScroll() {
 
   card.forEach((el, i) => {
     if (i !== 0) {
-      gsap.set(el, { yPercent: 150 });
+      gsap.set(el, { yPercent: 300 });
     }
   });
 

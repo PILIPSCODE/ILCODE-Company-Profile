@@ -112,3 +112,14 @@ body {
 .nav-item li {
     list-style: none;
 }
+/* validasi form ngab */
+.error {
+    border: 2px solid red;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 2px;
+    padding-left: 16px;
+}

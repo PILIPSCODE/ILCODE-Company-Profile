@@ -109,34 +109,40 @@
                     Join our creative team to design stunning website
                 </h2>
             </div>
-            <form action="">
-            <div class="flex justify-around">
-                <div class="mt-10">
-                    <p class="text-[#FFFFFF] font-bold font-sans">Full Name </p>
-                    <input type="text" placeholder="enter your name" class="w-120 h-12 border-b-4 border-[#EDE2C8] rounded-2xl">
+            <form action="/" id="form">
+                <div class="flex justify-around">
+                    <div class="mt-10">
+                        <p class="text-[#FFFFFF] font-bold font-sans">Full Name </p>
+                        <input type="text" id="fullname" placeholder="enter your name" class="p-4 pb-1 outline-none w-120 h-12 border-b-4 border-[#EDE2C8] rounded-2xl text-[#FFFFFF] font-semibold">
+                    </div>
+                    <div class="mt-10">
+                        <p class="text-[#FFFFFF] font-bold font-sans">Email Address</p>
+                        <input type="email" id="email" placeholder="enter your address" class="p-4 pb-1 outline-none w-120 h-12 border-b-4 border-[#EDE2C8] rounded-2xl text-[#FFFFFF] font-semibold">
+                    </div>
                 </div>
-                <div class="mt-10">
-                    <p class="text-[#FFFFFF] font-bold font-sans">Email Address</p>
-                    <input type="text" placeholder="enter your address" class="w-120 h-12 border-b-4 border-[#EDE2C8] rounded-2xl">
+                <div class="flex justify-around">
+                    <div class="mt-10">
+                        <p class="text-[#FFFFFF] font-bold font-sans">No. Phone </p>
+                        <input type="text" id="number" placeholder="enter your number" class="p-4 pb-1 outline-none w-120 h-12 border-b-4 border-[#EDE2C8] rounded-2xl text-[#FFFFFF] font-semibold">
+                    </div>
+                    <div class="mt-10">
+                        <p class="text-[#FFFFFF] font-bold font-sans">Resume/CV Upload</p>
+                        <input type="file" class="p-4 pb-1 outline-none w-120 h-12 border-b-4 border-[#EDE2C8] rounded-2xl text-[#FFFFFF] font-semibold cursor-pointer">
+                    </div>
                 </div>
-            </div>
-            <div class="mt-10 place-self-center">
-                <p class="text-[#FFFFFF] font-bold font-sans">Portfolio(github)</p>
-                <input type="text" placeholder="enter your github link" class="w-279 h-12 border-b-4 border-[#EDE2C8] rounded-2xl place-self-center">                
-            </div>
-            <div class="mt-10 place-self-center">
-                <p class="text-[#FFFFFF] font-bold font-sans">Resume/CV Upload</p>
-                <input type="file" placeholder="input file" class="w-279 h-12 border-b-4 border-[#EDE2C8] rounded-2xl place-self-center">
-            </div>
-            <div class="mt-10 place-self-center">
+                <div class="mt-10 place-self-center">
+                    <p class="text-[#FFFFFF] font-bold font-sans">Portfolio(github)</p>
+                    <input type="url" placeholder="enter your github link" class="p-4 pb-1 outline-none w-279 h-12 border-b-4 border-[#EDE2C8] rounded-2xl place-self-center text-[#FFFFFF] font-semibold">                
+                </div>
+                <div class="mt-10 place-self-center">
+                    <div>
+                        <p class="text-[#FFFFFF] font-bold font-sans">Why Join Us</p>
+                        <textarea name="why" id="" class="w-279 h-20 p-2 bg-[#EDE2C8] rounded font-semibold text-[#402E32]"></textarea>
+                    </div>
+                </div>
                 <div>
-                    <p class="text-[#FFFFFF] font-bold font-sans">Why Join Us</p>
-                    <textarea name="why" id="" class="w-279 h-20 bg-[#EDE2C8] rounded"></textarea>
+                    <button type="submit" class="mt-6 ml-20 px-5 py-2 bg-[#EDE2C8] rounded font-bold text-lg text-[#402E32] hover:bg-[#a79a7e] active:bg-[#8d8066] cursor-pointer">Submit</button>
                 </div>
-            </div>
-            <div>
-                <button type="submit" class="mt-6 ml-20 px-5 py-2 bg-[#EDE2C8] rounded font-bold text-lg text-[#402E32] hover:bg-[#a79a7e] active:bg-[#8d8066]">Submit</button>
-            </div>
             </form> 
         </div>
     </div>

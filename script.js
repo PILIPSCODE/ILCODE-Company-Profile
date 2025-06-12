@@ -1,26 +1,39 @@
 const lenis = new Lenis();
 
-lenis.on("scroll", (e) => {
-  console.log(e);
-});
+lenis.on("scroll", (e) => {});
 
 /*hero aniamtion section*/
 
 // Split text animation per block
 const SpliteChar = (arrText) => {
-  let mergedSpan = "";
-  arrText.forEach((e) => {
-    const span = document.createElement("span");
-    span.innerHTML = e === " " ? "&nbsp;" : e;
-    span.classList.add("split-animation");
-    mergedSpan += span.outerHTML;
+  const words = arrText.join("").split(" ");
+  let result = "";
+
+  words.forEach((word, index) => {
+    let chars = "";
+    word.split("").forEach((char) => {
+      const span = document.createElement("span");
+      span.textContent = char;
+      span.classList.add("split-animation");
+      chars += span.outerHTML;
+    });
+
+    // Wrap each word
+    result += `<span class="word">${chars}</span>`;
+
+    // Add space after word, except the last one
+    if (index !== words.length - 1) {
+      result += `<span class="space">&nbsp;</span>`;
+    }
   });
-  return mergedSpan;
+
+  return result;
 };
 
 const textBlocks = document.querySelectorAll(".split-text");
 
 textBlocks.forEach((el) => {
+  console.log(el);
   const arrText = el.textContent.trim().replace(/\s+/g, " ").split("");
   el.innerHTML = SpliteChar(arrText);
 
@@ -43,8 +56,6 @@ textBlocks.forEach((el) => {
 });
 
 // Fade up
-const timelineFadeUp = gsap.timeline();
-
 gsap.fromTo(".fade-up", { y: 100, opacity: 0 }, { y: 0, opacity: 1, delay: 4 });
 
 /*end hero animation section*/
@@ -60,8 +71,6 @@ window.addEventListener("load", () => {
 });
 
 function setupFadeUpScroll() {
-  gsap.registerPlugin(ScrollTrigger);
-
   const elFadeUp = document.querySelectorAll(".fade-up-scroll");
 
   elFadeUp.forEach((el, index) => {
@@ -80,40 +89,71 @@ function setupFadeUpScroll() {
         trigger: el,
         start: "top center",
         end: "bottom center",
-        scrub: true,
+        scrub: 1,
         id: `fadeUp-${index}`,
       },
     });
   });
 
-  // Refresh ScrollTrigger to catch newly added elements
   ScrollTrigger.refresh();
 }
 
-// // Split Text
-// const elSplitText = document.querySelectorAll(".split-text-scroll");
+// Split Text
+const elSplitText = document.querySelectorAll(".split-text-scroll");
 
-// elSplitText.forEach((el) => {
-//   const span = document.createElement("span");
-//   span.textContent = el.textContent;
+elSplitText.forEach((el, index) => {
+  console.log(el);
 
-//   el.innerHTML = "";
-//   el.appendChild(span);
+  const arrText = el.textContent.trim().replace(/\s+/g, " ").split("");
+  el.innerHTML = SpliteChar(arrText);
 
-//   gsap.set(span, { bottom: -200 });
+  const chars = el.querySelectorAll(".split-animation");
 
-//   const timelineFadeUpScroll = gsap.timeline({
-//     scrollTrigger: {
-//       trigger: el,
-//       start: "top bottom",
-//       end: "bottom 80%",
-//       scrub: true,
-//     },
-//     defaults: { ease: "none" },
-//   });
+  gsap.set(chars, { filter: "blur(5px)", y: 200 });
 
-//   timelineFadeUpScroll.to(span, { bottom: 0, duration: 0.5 });
-// });
+  const timelineSplitTextScroll = gsap.timeline({
+    scrollTrigger: {
+      trigger: el,
+      start: "top center",
+      end: "bottom center",
+      scrub: 4,
+      id: `split-text-${index}`,
+    },
+    defaults: { ease: "none" },
+  });
+
+  timelineSplitTextScroll.to(chars, {
+    filter: "blur(0px)",
+    ease: "power3.out",
+    y: 0,
+    duration: 2,
+    stagger: 9,
+  });
+});
+
+const elFadeUpel = document.querySelectorAll(".fade-up-scroll-el");
+
+elFadeUpel.forEach((el, index) => {
+  gsap.set(el, { opacity: 0, y: 200 });
+
+  const timelineFadeupelScroll = gsap.timeline({
+    scrollTrigger: {
+      trigger: el,
+      start: "top bottom",
+      end: "bottom center",
+      scrub: true,
+      id: `fadeUp-${index}`,
+    },
+    defaults: { ease: "none" },
+  });
+
+  timelineFadeupelScroll.to(el, {
+    opacity: 1,
+    ease: "power3.out",
+    y: 0,
+    duration: 2,
+  });
+});
 
 /*End scroll Trigger animation section*/
 // Lenis Smooth Scroll

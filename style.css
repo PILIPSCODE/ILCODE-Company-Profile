@@ -135,7 +135,19 @@ body {
     will-change: transform;
 }
 
-.fade-up-scroll {
+.word {
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.space {
+    display: inline-block;
+    width: 0.4em;
+}
+
+
+.fade-up-scroll,
+.split-text-scroll {
     overflow: hidden;
 }
 

@@ -1,5 +1,3 @@
-gsap.registerPlugin(ScrollTrigger);
-
 window.addEventListener("load", () => {
   setTimeout(() => {
     initScroll();

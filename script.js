@@ -136,7 +136,6 @@ function setupFadeUpScroll() {
         start: "-20% bottom",
         end: "bottom 80%",
         scrub: true,
-        markers: true,
         id: `fadeUp-${index}`,
       },
     });

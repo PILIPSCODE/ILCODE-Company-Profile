@@ -112,3 +112,20 @@ body {
 .nav-item li {
     list-style: none;
 }
+
+.split-text {
+    position: relative;
+}
+
+.split-animation {
+    display: inline-block;
+    will-change: transform;
+}
+
+.fade-up-scroll {
+    overflow: hidden;
+}
+
+.fade-up-scroll span {
+    position: relative;
+}

@@ -56,7 +56,11 @@ textBlocks.forEach((el) => {
 });
 
 // Fade up
-gsap.fromTo(".fade-up", { y: 100, opacity: 0 }, { y: 0, opacity: 1, delay: 4 });
+gsap.fromTo(
+  ".fade-up",
+  { y: 100, opacity: 0, stagger: 0.4 },
+  { y: 0, opacity: 1, delay: 4, stagger: 0.4 }
+);
 
 /*end hero animation section*/
 /*scroll Trigger animation section*/
@@ -109,13 +113,13 @@ elSplitText.forEach((el, index) => {
 
   const chars = el.querySelectorAll(".split-animation");
 
-  gsap.set(chars, { filter: "blur(5px)", y: 200 });
+  gsap.set(chars, { filter: "blur(5px)", y: 500 });
 
   const timelineSplitTextScroll = gsap.timeline({
     scrollTrigger: {
       trigger: el,
-      start: "top center",
-      end: "bottom center",
+      start: "top-=100px center",
+      end: "center center+=100px",
       scrub: 4,
       id: `split-text-${index}`,
     },
@@ -153,6 +157,17 @@ elFadeUpel.forEach((el, index) => {
     y: 0,
     duration: 2,
   });
+});
+
+gsap.to(".oke", {
+  y: 100,
+  filter: "blur(0px)",
+  opacity: 1,
+  stagger: 0.2,
+  ease: "power3.out",
+  duration: 0.1,
+  scrollTrigger: ".oke",
+  delay: 2.3,
 });
 
 /*End scroll Trigger animation section*/

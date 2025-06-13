@@ -23,6 +23,7 @@ function initScroll() {
       pin: true,
       start: "top 300px",
       end: () => `+=${card.length * 100}%`,
+      pinSpacing: false,
       scrub: 1,
     },
     defaults: { ease: "none" },
@@ -49,6 +50,7 @@ function initScroll() {
       start: "top top",
       end: () =>
         `+=${cardHorizontal.length * wrapperHorizontal.offsetHeight}px`,
+      pinSpacing: false,
       scrub: 1,
     },
     defaults: { ease: "none" },

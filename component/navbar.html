@@ -13,7 +13,7 @@
         onclick="this.querySelector('a').click();"
       >
         <i class="bi bi-house ml-6 group-hover:text-[#342C29]"></i>
-        <a class="nav-item pointer-events-none" href="/index.html">
+        <a class="nav-item reverse-nav pointer-events-none" href="/index.html">
           <span
             class="absolute transition-transform group-hover:translate-y-3/4 duration-300"
           >
@@ -32,7 +32,10 @@
         onclick="this.querySelector('a').click();"
       >
         <i class="bi bi-app ml-6 group-hover:text-[#342C29]"></i>
-        <a class="nav-item pointer-events-none" href="/halaman/project.html">
+        <a
+          class="nav-item reverse-nav pointer-events-none"
+          href="/halaman/project.html"
+        >
           <span
             class="absolute transition-transform group-hover:translate-y-3/4 duration-300"
           >
@@ -51,7 +54,10 @@
         onclick="this.querySelector('a').click();"
       >
         <i class="bi bi-microsoft-teams ml-6 group-hover:text-[#342C29]"></i>
-        <a class="nav-item pointer-events-none" href="/halaman/about.html">
+        <a
+          class="nav-item reverse-nav pointer-events-none"
+          href="/halaman/about.html"
+        >
           <span
             class="absolute transition-transform group-hover:translate-y-3/4 duration-300"
           >
@@ -70,7 +76,10 @@
         onclick="this.querySelector('a').click();"
       >
         <i class="bi bi-briefcase ml-6 group-hover:text-[#342C29]"></i>
-        <a class="nav-item pointer-events-none" href="/halaman/careers.html">
+        <a
+          class="nav-item reverse-nav pointer-events-none"
+          href="/halaman/careers.html"
+        >
           <span
             class="absolute transition-transform group-hover:translate-y-3/4 duration-300"
           >
@@ -89,7 +98,10 @@
         onclick="this.querySelector('a').click();"
       >
         <i class="bi bi-envelope ml-6 group-hover:text-[#342C29]"></i>
-        <a class="nav-item pointer-events-none" href="/halaman/contactUs.html">
+        <a
+          class="nav-item reverse-nav pointer-events-none"
+          href="/halaman/contactUs.html"
+        >
           <span
             class="absolute transition-transform group-hover:translate-y-3/4 duration-300"
           >
@@ -151,9 +163,46 @@
 </div>
 
 <div class="flex gap-4 items-center justify-end left-0 w-full font-bold">
-  <div class="menu-btn bg-tersier" onclick="this.classList.toggle('active')">
+  <div
+    class="menu-btn group relative bg-tersier"
+    onclick="this.classList.toggle('active')"
+  >
     <span></span>
     <span></span>
     <span></span>
+    <div
+      class="absolute text-xl group-hover:scale-y-100 rounded-md duration-300 origin-top scale-y-0 bg-white flex w-full items-center px-5 top-10 -right-1 flex-col"
+    >
+      <a
+        class="relative reverse-nav hover:scale-125 hover:text-white hover:bg-[#342c29] p-2 duration-300"
+        href="/index.html"
+      >
+        <i class="bi bi-house"> </i>
+      </a>
+      <a
+        class="relative reverse-nav hover:scale-125 hover:text-white hover:bg-[#342c29] p-2 duration-300"
+        href="../halaman/project.html"
+      >
+        <i class="bi bi-app"></i>
+      </a>
+      <a
+        class="relative reverse-navhover:scale-125 hover:text-white hover:bg-[#342c29] p-2 duration-300"
+        href="../halaman/about.html"
+      >
+        <i class="bi bi-microsoft-teams"></i>
+      </a>
+      <a
+        class="relative reverse-nav hover:scale-125 hover:text-white hover:bg-[#342c29] p-2 duration-300"
+        href="../halaman/careers.html"
+      >
+        <i class="bi bi-briefcase"></i>
+      </a>
+      <a
+        class="relative reverse-nav hover:scale-125 hover:text-white hover:bg-[#342c29] p-2 duration-300"
+        href="../halaman/contactUs.html"
+      >
+        <i class="bi bi-envelope"></i>
+      </a>
+    </div>
   </div>
 </div>

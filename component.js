@@ -102,7 +102,7 @@ async function addNavBar() {
     }
   });
 
-  document.querySelectorAll(".nav-item").forEach((nav, index) => {
+  document.querySelectorAll(".reverse-nav").forEach((nav, index) => {
     nav.addEventListener("click", (event) => {
       event.preventDefault();
       let targetURL = nav.getAttribute("href");

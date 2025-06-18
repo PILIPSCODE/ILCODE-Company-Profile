@@ -18,13 +18,17 @@ form.addEventListener("submit", function (e) {
 
   const namaInput = document.getElementById("username");
   const emailInput = document.getElementById("email");
+  const numberInput = document.getElementById("number")
+
   const errorName = document.getElementById("errorName");
   const errorEmail = document.getElementById("errorEmail");
+  const errorNumber = document.getElementById("errorNumber");
 
   const namaValid = validate(namaInput, errorName);
   const emailValid = validate(emailInput, errorEmail);
+  const numberValid = validate(numberInput, errorNumber);
 
-  if (namaValid && emailValid) {
+  if (namaValid && emailValid && numberValid) {
     form.submit();
   }
 });

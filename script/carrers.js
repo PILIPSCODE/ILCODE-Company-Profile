@@ -29,6 +29,6 @@ form.addEventListener("submit", function (e) {
   const numberValid = validate(numberInput, errorNumber);
 
   if (namaValid && emailValid && numberValid) {
-    alert("form terkirim")
+    alert("form sudah terkirim")
   }
 });

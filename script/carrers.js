@@ -3,7 +3,7 @@
 function validate(inputElement, errorElement) {
   if (inputElement.value.trim() === "") {
     inputElement.classList.add("error");
-    errorElement.textContent = "ndak boleh kosong";
+    errorElement.textContent = "form tidak boleh kosong";
     return false;
   } else {
     inputElement.classList.remove("error");

@@ -3,7 +3,7 @@
 function validate(inputElement, errorElement) {
   if (inputElement.value.trim() === "") {
     inputElement.classList.add("error");
-    errorElement.textContent = "ndak boleh kosong";
+    errorElement.textContent = "form tidak boleh kosong";
     return false;
   } else {
     inputElement.classList.remove("error");
@@ -29,6 +29,6 @@ form.addEventListener("submit", function (e) {
   const numberValid = validate(numberInput, errorNumber);
 
   if (namaValid && emailValid && numberValid) {
-    form.submit();
+    alert("form sudah terkirim")
   }
 });
